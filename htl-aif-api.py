@@ -15,7 +15,7 @@ from safrs import search, startswith
 
 db = SQLAlchemy()
 app = Flask('HumTechLab AIF API')
-app.config.update( SQLALCHEMY_DATABASE_URI = 'mysql+pymysql://test1:test1-@localhost/test1', DEBUG = True)
+app.config.update( SQLALCHEMY_DATABASE_URI = 'mysql+pymysql://user:pw@localhost/DBNAME', DEBUG = True)
 app.url_map.strict_slashes = False
 SAFRSBase.db_commit = False
 builtins.db  = SQLAlchemy(app)
